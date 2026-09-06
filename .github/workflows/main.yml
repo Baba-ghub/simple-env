@@ -1,0 +1,15 @@
+      name: Demo-vars
+      on: 
+       push: 
+      env:
+        APP_NAME: MYAPP
+        ENVIRONMENT: DEV
+      jobs:
+        build: 
+         runs-on: ubuntu-22.04
+         steps:
+           - name: Display the message
+             run: |
+              echo "APP: $APP_NAME"
+              echo "Env: $ENVIRONMENT"
+            
